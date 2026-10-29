@@ -1,0 +1,15 @@
+<h1>Hi</h1>
+
+<input
+  #searchBox
+  type="text"
+  [value]="searchTerm()"
+  (input)="searchTerm.set(searchBox.value)"
+  placeholder="Search fruits..."
+/>
+
+<ul>
+  @for (item of filteredItems(); track item) {
+    <li>{{ item }}</li>
+  }
+</ul>
